@@ -1,0 +1,262 @@
+:root {
+  /* Brand palette */
+  --bs-primary: #2979ff; /* bright yet calm tech blue */
+  --bs-accent: #00c9a7; /* minty green accent for contrast */
+  --bs-dark: #1a1a1a;
+  --bs-light: #f9fbff; /* Supporting shades */
+  --gradient-hero: linear-gradient(135deg, #2979ff 0%, #00c9a7 100%);
+  --text-main: #222;
+  --text-muted: #6c757d;
+}
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--gradient-hero);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+.hero-section,
+.features {
+  background: transparent; /* Let them share the body gradient */
+}
+.hero-section {
+  color: white;
+  padding-block: 2rem;
+}
+.hero-section .container {
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.hero-section h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  color: var(--bs-dark);
+  margin-bottom: 1rem;
+}
+.hero-section p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+.hero-section .btn-primary {
+  background-color: var(--bs-primary);
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hero-section .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(41, 121, 255, 0.4);
+}
+.hero-section .btn-outline-secondary {
+  border-color: var(--bs-accent);
+  color: var(--bs-accent);
+}
+.hero-section .btn-outline-secondary:hover {
+  background-color: var(--bs-accent);
+  color: white;
+}
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.brand-text {
+  font-size: 1.6rem;
+  color: #222;
+  font-family: "Outfit", sans-serif;
+  font: weight 100px;
+  letter-spacing: 0.5px;
+} /* Navbar base styling */
+.navbar,
+.btn {
+  font-family: "Inter", system-ui, sans-serif;
+}
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+} /* General Section Styling */
+.features .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111827;
+} /* Grid Layout */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+} /* Feature Card */
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+.feature-icon {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 25px;
+  object-fit: contain;
+}
+body > section.features > div > h2 {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.feature-title {
+  font-size: 1.25rem;
+  color: #111827;
+  margin-bottom: 10px;
+  font-family: "Outfit", sans-serif;
+}
+.feature-desc {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Inter", system-ui, sans-serif;
+}
+.features {
+  padding: 4rem;
+} /* SHOWCASE */
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      135deg,
+      rgba(41, 121, 255, 0.8),
+      rgba(0, 201, 167, 0.8)
+    ),
+    url("shape.png") center/cover no-repeat;
+} /* Overlay for text */
+.showcase-overlay {
+  position: relative;
+  z-index: 2; /* above pattern */
+  text-align: center;
+  padding: 0 20px;
+}
+.showcase-text {
+  font-size: 4rem;
+  font-weight: 600;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.3;
+  font-family: "Outfit", sans-serif;
+} /* PRICING */
+.pricing-section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing-section .container {
+  max-width: 1500px;
+}
+.pricing-section .row {
+  --bs-gutter-x: 5rem;
+  justify-content: center;
+}
+@media (max-width: 767.98px) {
+  .pricing-section .col {
+    max-width: 90%; /* Shrink cards a bit */
+    margin: 0 auto; /* Center each card horizontally */
+  }
+  .pricing-section .card {
+    margin-bottom: 1.5rem; /* Space between stacked cards */
+  }
+}
+body > section.pricing-section button {
+  border-color: var(--bs-accent);
+  color: var(--bs-accent);
+}
+body > section.pricing-section button:hover {
+  background-color: var(--bs-accent);
+  color: white;
+}
+.pricing-section h1 {
+  font-family: "Outfit", sans-serif;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.pricing-section h4 {
+  font-family: "Outfit", sans-serif;
+}
+.pricing-section p {
+  font-family: "Inter", system-ui, sans-serif;
+}
+.pricing-section li {
+  font-family: "Inter", system-ui, sans-serif;
+} /* Ensure all primary buttons have consistent blue styling */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border: none !important;
+  color: #fff !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(41, 121, 255, 0.4);
+  background-color: var(--bs-primary) !important;
+  color: #fff !important;
+}
+.section-title-pricing {
+  font-size: 2rem;
+  font-weight: 200;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.3;
+  font-family: "Outfit", sans-serif;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+.testimonial-section {
+  padding: 80px 0 60px;
+}
+
+.testimonial-section img {
+  width: 90px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem; /* centers and adds spacing below */
+  border: 3px solid #eee; /* subtle frame for better contrast */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* optional soft depth */
+}
+
+.testimonial-section p {
+  font-family: "Inter", system-ui, sans-serif;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  color: #333;
+  line-height: 1.6;
+}
+
+.testimonial-section span {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--bs-secondary-color);
+}
